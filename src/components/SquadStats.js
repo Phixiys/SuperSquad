@@ -20,28 +20,40 @@ class Squadstats extends Component {
     return speed;
   }
 
+  total() {
+    let total = 0;
+    this.props.heroes.forEach(hero => (total += hero.strength + hero.intelligence + hero.speed));
+    return total;
+  }
+
   render() {
     return (
       <div>
         <h4>Squad Stats</h4>
-        <ul className="list-group">
-          <li className="list-group-item">
+        <ul className="collection">
+          <li className="collection-item">
             <span className="stat-key">
               <b>Overall Strength: </b>
             </span>
             <span className="stat-nr">{this.strength()}</span>
           </li>
-          <li className="list-group-item">
+          <li className="collection-item">
             <span className="stat-key">
               <b>Overall Intelligence: </b>
             </span>
             <span className="stat-nr">{this.intelligence()}</span>
           </li>
-          <li className="list-group-item">
+          <li className="collection-item">
             <span className="stat-key">
               <b>Overall Speed: </b>
             </span>
             <span className="stat-nr">{this.speed()}</span>
+          </li>
+        </ul>
+        <h3>Total Strenght</h3>
+        <ul className="collection with-header">
+          <li className="collection-item with-header">
+            <h3>{this.total()}</h3>
           </li>
         </ul>
       </div>

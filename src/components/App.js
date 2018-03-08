@@ -8,15 +8,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1 className="mb-5">SuperSquad</h1>
+        <h1 className="mb-5">Super Squad</h1>
         <div className="row">
-          <div className="col-md-4">
+          <div className="col s4">
             <CharacterList />
           </div>
-          <div className="col-md-4">
+          <div className="col s4">
             <HeroList />
           </div>
-          <div className="col-md-4">
+          <div className="col s4">
             <SquadStats />
           </div>
         </div>

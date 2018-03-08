@@ -7,13 +7,13 @@ class HeroList extends Component {
     return (
       <div>
         <h4>Your Hero Squad</h4>
-        <ul className="list-group">
+        <ul className="collection">
           {this.props.heroes.map(hero => {
             return (
-              <li key={hero.id} className="list-group-item">
+              <li key={hero.id} className="collection-item">
                 <div className="list-item">{hero.name}</div>
                 <div className="list-item right-button" onClick={() => this.props.removeCharacterById(hero.id)}>
-                  <i className="fa fa-times" />
+                  <i className="material-icons md-18 md-red">clear</i>
                 </div>
               </li>
             );
