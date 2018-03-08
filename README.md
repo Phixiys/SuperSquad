@@ -1,3 +1,3 @@
-# H1 SuperSquad
+# SuperSquad
 
 Simple React app to learn React + Redux
